@@ -1,0 +1,26 @@
+\:host .card-container
+  &.p-d-flex
+    display: flex
+    flex-direction: row
+
+  .card
+    width: 75px
+    height: 75px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 1rem
+    user-select: none
+    background: var(--surface-e)
+    padding: 2rem
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%)
+    border-radius: 4px
+    margin-bottom: 2rem
+
+    &.primary-box
+      background-color: var(--primary-color)
+      padding: 0
+      color: var(--primary-color-text)
+
+    &:last-child
+      margin-right: 0

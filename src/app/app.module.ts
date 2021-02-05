@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    RippleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
