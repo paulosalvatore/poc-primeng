@@ -5,8 +5,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { EventService } from './event.service';
 
 import { CalendarOptions } from '@fullcalendar/angular';
-
-import dayGridPlugin from '@fullcalendar/daygrid';
+import ptBrLocale from '@fullcalendar/core/locales/pt-br';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +15,10 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 export class AppComponent implements OnInit {
   options: CalendarOptions = {
     initialView: 'listWeek',
+    initialDate: '2021-02-07',
+    slotDuration: '02:00:00',
+    themeSystem: 'bootstrap',
+    locale: ptBrLocale,
   };
 
   constructor(
@@ -28,12 +31,7 @@ export class AppComponent implements OnInit {
     this.primengConfig.ripple = true;
 
     this.eventService.getEvents().then(events => {
-      this.options = {
-        themeSystem: 'bootstrap',
-        initialDate: '2021-02-01',
-        plugins: [dayGridPlugin],
-        events
-      };
+      this.options.events = events;
     });
   }
 }

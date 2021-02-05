@@ -10,9 +10,6 @@ import { RippleModule } from 'primeng/ripple';
 
 // FullCalendar
 import { FullCalendarModule } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
 import listPlugin from '@fullcalendar/list';
 
@@ -20,9 +17,6 @@ import listPlugin from '@fullcalendar/list';
 import { AppComponent } from './app.component';
 
 FullCalendarModule.registerPlugins([
-  dayGridPlugin,
-  timeGridPlugin,
-  interactionPlugin,
   bootstrapPlugin,
   listPlugin
 ]);
